@@ -1,0 +1,8 @@
+How to see the last commit
+
+Use this command "git show HEAD"
+
+How to undo last commit?
+
+Use this command : git checkout HEAD <filename>
+
