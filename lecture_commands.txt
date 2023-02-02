@@ -4,3 +4,5 @@ git add && git commint -m
 git push --set-upstream origin
 git merge
 Get back to the repository create pull request merge the pull request
+git branch name of branch
+
