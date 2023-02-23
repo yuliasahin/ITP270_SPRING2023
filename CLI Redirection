@@ -1,15 +1,23 @@
 make a file and add five rivers to it, including the amazon river:
 nano -l rivers.txt and i am adding 5 rivers (Nile River, AmazRiver, Paraná Riveron River, Yangtze River, Mississippi)
 use sed to change amazon to Ohio
-student@kali:~/Desktop/geography$ sed 's/Amamz/Ohio/' rivers.txt
+student@kali:~/Desktop/geography$ sed -i 's/Amaz/Ohio/g' rivers.txt
+student@kali:~/Desktop/geography$ cat rivers.txt
 Nile River
-AmazRiver
+OhioRiver
 Paraná Riveron River
 Yangtze River
 Mississippi 
+Congo River
+Mekong River
+Mackenzie River
+Niger River
+Euphrates River
+Yukon River
+Indus River
+
 student@kali:~/Desktop/geography$ sort rivers.txt | uniq > rivers_new.txt
 student@kali:~/Desktop/geography$ cat rivers_new.txt
-AmazRiver
 Congo River
 Euphrates River
 Indus River
@@ -18,30 +26,28 @@ Mekong River
 Mississippi 
 Niger River
 Nile River
+OhioRiver
 Paraná Riveron River
 Yangtze River
 Yukon River
+student@kali:~/Desktop/geography$ 
 compare the files to each other
-student@kali:~/Desktop/geography$ diff rivers.txt rivers_new.txt
-1d0
-< Nile River
-3,5d1
-< Paraná Riveron River
-< Yangtze River
-< Mississippi 
-7c3,4
-< Mekong River
----
+student@kali:~/Desktop/geography$ diff -i rivers.txt rivers_new.txt
+0a1,7
+> Congo River
 > Euphrates River
 > Indus River
-8a6,7
+> Mackenzie River
 > Mekong River
 > Mississippi 
-10c9,11
+> Niger River
+5,10d11
+< Mississippi 
+< Congo River
+< Mekong River
+< Mackenzie River
+< Niger River
 < Euphrates River
----
-> Nile River
-> Paraná Riveron River
-> Yangtze River
 12d12
 < Indus River
+student@kali:~/Desktop/geography$ 
