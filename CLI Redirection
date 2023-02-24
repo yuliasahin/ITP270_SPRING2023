@@ -51,3 +51,7 @@ student@kali:~/Desktop/geography$ diff -i rivers.txt rivers_new.txt
 12d12
 < Indus River
 student@kali:~/Desktop/geography$ 
+
+Another solution after class:
+
+#One-liner touch rivers.txt && echo -e "Amazon River\nNile River\nYangtze River\nPotomac River\nDanube River\nPotomac River" > rivers.txt && sort rivers.txt | uniq > rivers2.txt | sed 's\Amazon\Ohio\g' rivers2.txt > rivers3.txt  && diff rivers.txt rivers3.txt
