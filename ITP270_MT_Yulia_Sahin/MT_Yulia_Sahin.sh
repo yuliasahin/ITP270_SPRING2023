@@ -1,5 +1,4 @@
 #!/bin/bash
-
  read -p "Enter 'google.com' to ping, anything else is invalid"
 
  #The input validation 
