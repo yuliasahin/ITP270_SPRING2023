@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+
+echo "google.com:"
+
+read google.com
+
+if [ "$google.com" == "" ]
+
+then
+
+ echo "Enter the Subnet:"
+
+ echo "Syntax Example = ./ping_sweep.sh 142.251.32.46"
+
+else
+
+     for IP in $(seq 1 254); do
+
+          ping -c 1 $Subnet.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" >> discoveredIPs_YULIAS.txt &  
+
+done
+
+fi
